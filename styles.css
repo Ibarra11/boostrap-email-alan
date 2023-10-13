@@ -1,0 +1,283 @@
+:root {
+  --background: #004643;
+  --paragraph: #abd1c6;
+  --headline: #fffffe;
+  --highlight: #f9bc60;
+  --button-text: #001e1d;
+  --tertiary: #e16162;
+  --secondary-bg: #abd1c6;
+  --white-200: #e8e4e6;
+  --green-200: #0f3433;
+  --green-300: #001e1d;
+}
+
+/* Reset Btton Styles */
+button {
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  min-height: 100%;
+  padding: 24px;
+}
+
+.email {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.search {
+  background-color: var(--white-200);
+  padding-inline: 8px;
+  border-radius: 8px;
+  padding-block: 8px;
+}
+
+.hamburger {
+  color: var(--white-200);
+}
+
+.message-list-item {
+  display: flex;
+  gap: 16px;
+  /* align-items: flex-start; */
+  background-color: var(--white-200);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.message-content {
+  color: var(--green-300);
+}
+
+.message-content-user {
+  font-size: 18px;
+}
+
+.message-content-btn-group {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  color: var(--green-200);
+}
+
+time {
+  font-size: 14px;
+}
+
+.compose-btn {
+  background-color: var(--highlight);
+  color: var(--button-text);
+  min-height: 36px;
+  padding-inline: 16px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compose-btn-mobile {
+  position: fixed;
+  bottom: 64px;
+  right: 24px;
+}
+.compose-btn-desktop {
+  align-self: center;
+  margin-bottom: 24px;
+}
+aside {
+  background-color: var(--green-200);
+  color: var(--white-200);
+  padding-block: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.sidebar-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-block: 12px;
+  text-decoration: none;
+  color: var(--white-200);
+}
+
+.sidebar-nav .active {
+  background-color: var(--green-300);
+}
+
+.sidebar-nav .active i {
+  color: var(--highlight);
+}
+
+.sidebar-nav i {
+  font-size: 14px;
+}
+
+.avatar {
+  align-self: center;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+  height: 100%;
+  gap: 24px;
+  overflow-y: auto;
+}
+
+.message-list img {
+  width: 40px;
+  height: 40px;
+}
+
+.starred {
+  color: var(--highlight);
+  border: none;
+}
+
+.mobile-nav {
+  gap: 12px;
+}
+
+#desktop-messages {
+  padding-right: 8px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tablet-search {
+  gap: 8px;
+}
+
+.tablet-search input {
+  padding-block: 8px;
+  padding-left: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.desktop-message-view {
+  display: flex;
+  gap: 32px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.desktop-message-view > * {
+  flex-shrink: 1 !important;
+}
+
+#desktop-message {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--white-200);
+  background-color: var(--white-200);
+  color: var(--green-300);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.message-metadata {
+  display: flex;
+  gap: 16px;
+}
+
+.message-header {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--background);
+}
+
+.message-header time {
+  margin-left: auto;
+  margin-top: 3px;
+}
+
+.recipient-avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.message-recepient h3 {
+  font-size: 20px;
+}
+
+.message-recepient p {
+  font-size: 14px;
+}
+
+.message-response {
+  margin-top: auto;
+}
+
+.message-response input {
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 8px;
+}
+
+.message-actions {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+@media (min-width: 576px) {
+  .email {
+    gap: 16px;
+  }
+
+  .col-sm-9 {
+    flex-shrink: 1;
+  }
+
+  .wrapper {
+    height: 100%;
+    min-height: revert;
+  }
+
+  .messages {
+    padding-right: 8px;
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap-Email-Alan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container-xl wrapper">
+      <div class="email d-flex flex-column flex-sm-row">
+        <!-- Mobile Nav -->
+        <nav class="row g-0 d-sm-none mb-4 mobile-nav">
+          <button class="col-auto d-sm-none hamburger">
+            <span class="fa-solid fa-bars"></span>
+            <span class="visually-hidden">open nav</span>
+          </button>
+          <input
+            class="col search"
+            placeholder="search messages"
+            type="search"
+          />
+        </nav>
+        <!-- Sidebar for tablet and desktop -->
+        <aside class="d-none col-sm-3 col-lg-2 d-sm-flex flex-sm-column">
+          <img class="avatar mb-4" src="https://i.pravatar.cc/100" />
+          <button class="compose-btn compose-btn-desktop">
+            <span class="fa-regular fa-paper-plane"></span>
+            Compose
+          </button>
+          <nav class="sidebar-nav">
+            <ul id="nav-list">
+              <li class="active">
+                <a href="#">
+                  <i class="fa-solid fa-inbox"></i>
+                  Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-star"></i> Starred </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-envelope-circle-check"></i> Sent</a
+                >
+              </li>
+              <li>
+                <a href="#"> <i class="fa-solid fa-note-sticky"></i> Draft</a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-solid fa-trash-can"></i>Trash</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="col-sm-9 col-lg-10 g-0">
+          <div class="d-none d-sm-flex mb-4 tablet-search">
+            <input
+              class="flex-grow-1 mr-2"
+              placeholder="search messages"
+              type="search"
+            />
+          </div>
+          <!-- mobile message view -->
+          <div id="mobile-messages" class="message-list d-lg-none"></div>
+          <!-- tablet to desktop view -->
+          <div class="desktop-message-view d-none d-lg-flex">
+            <div id="desktop-messages" class="col-4 message-list"></div>
+            <div class="col-8" id="desktop-message">
+              <div class="message-header">
+                <img class="recipient-avatar" src="https://i.pravatar.cc/100" />
+                <div class="message-recepient">
+                  <h3>Message Subject</h3>
+                  <p>Recipient</p>
+                </div>
+                <time>10/01/23</time>
+                <div class="message-actions">
+                  <button><i class="fa-solid fa-star"></i></button>
+                  <button><i class="fa-solid fa-share"></i></button>
+                  <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+              </div>
+              <div class="message-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquam, at architecto debitis voluptates assumenda dolores
+                  ipsa esse eaque similique nulla iste perspiciatis dolor veniam
+                  doloremque, maxime omnis officiis, iusto magnam repellendus.
+                  Impedit molestias aliquid, voluptas earum facilis maxime iste
+                  ducimus consectetur, id nemo deleniti voluptates in pariatur
+                  praesentium architecto repellendus!
+                </p>
+              </div>
+              <div class="message-response">
+                <input placeholder="reply to message" type="text" />
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <button class="compose-btn compose-btn-mobile d-sm-none">
+        <span class="fa-regular fa-paper-plane"></span>
+        Compose
+      </button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
