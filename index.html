@@ -38,7 +38,13 @@
         <!-- Sidebar for tablet and desktop -->
         <aside class="d-none col-sm-3 col-lg-2 d-sm-flex flex-sm-column">
           <img class="avatar mb-4" src="https://i.pravatar.cc/100" />
-          <button class="compose-btn compose-btn-desktop">
+
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            class="compose-btn compose-btn-desktop"
+          >
             <span class="fa-regular fa-paper-plane"></span>
             Compose
           </button>
@@ -67,7 +73,6 @@
             </ul>
           </nav>
         </aside>
-
         <main class="col-sm-9 col-lg-10 g-0">
           <div class="d-none d-sm-flex mb-4 tablet-search">
             <input
@@ -106,25 +111,97 @@
                   praesentium architecto repellendus!
                 </p>
               </div>
-              <div class="message-response">
+              <div style="position: relative" class="message-response">
                 <input placeholder="reply to message" type="text" />
+                <button
+                  style="position: absolute; right: 0"
+                  class="btn btn-primary h-100"
+                  id="liveToastBtn"
+                >
+                  Reply
+                </button>
               </div>
             </div>
           </div>
         </main>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+          style="top: 50%"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Compose Message
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <textarea class="w-100"> </textarea>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="compose-btn compose-btn-mobile d-sm-none">
+      <button
+        type="button"
+        class="compose-btn compose-btn-mobile d-sm-none"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
         <span class="fa-regular fa-paper-plane"></span>
         Compose
       </button>
-    </div>
 
+      <!-- toast -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast bg-success text-white"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header d-flex justify-content-between">
+            <small>11 mins ago</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">Message Sent</div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
     <script src="index.js"></script>
   </body>
 </html>
